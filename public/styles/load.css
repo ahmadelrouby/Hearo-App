@@ -1,0 +1,105 @@
+.no-js .loadingScreen {
+    display: none;
+}
+
+.loadingScreen {
+    position: fixed;
+    background: rgb(95, 13, 78);
+    top:  0;
+    left: 0;
+    width:  100vw;
+    height: 100vh;
+    z-index: 1000;
+}
+
+html, body {
+    height: 100%;
+}
+
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);  /* IE 9 */
+        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);  /* IE 9 */
+        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+}
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);  /* IE 9 */
+        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);  /* IE 9 */
+        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+}
+
+.loadingScreen .logospiral {
+    box-sizing: border-box;
+    border: 0.8vh solid rgba(255,255,255,0.6);
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+
+.loadingScreen .logo {
+    position: absolute;
+    left: 10%;
+    top:  10%;
+    background: url(../images/logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 80%;
+    height: 80%;
+}
+
+.loaded .loadingScreen .logowrapper {
+    -ms-transform:      scale(0.1);
+    -webkit-transform:  scale(0.1);
+    transform:          scale(0.1);
+}
+
+.loadingScreen .logowrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left:-10vh;
+    margin-top: -10vh;
+    width:      20vh;
+    height:     20vh;
+    
+    -webkit-transition: 0.3s ease -webkit-transform;
+    transition: 0.3s ease transform;
+}
+
+@media screen and (orientation:portrait) {
+    .loadingScreen .logowrapper {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left:    -10vw;
+        margin-top:     -10vw;
+        width:          20vw;
+        height:         20vw;
+    }
+    
+
+    .loadingScreen .logospiral {
+        border-width: 0.8vw;
+    }
+}

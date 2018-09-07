@@ -1,0 +1,71 @@
+body {
+    background: black;   
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+nav {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    background: rgba(0,0,0,1);
+    box-shadow: 0 0 8em 2em black;
+    transition: 0.5s ease background-color;
+    color: white;
+    z-index: 999;
+    transition: 0.5s ease box-shadow;
+}
+
+nav:hover {
+    box-shadow: 0 0 9em 3em black;
+}
+
+nav div {
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 2vw;
+    width: 33.333%;
+    font-size: 1.8vh;
+    text-align: center;
+
+    transition: 0.2s ease background-color;
+    cursor: pointer;
+    vertical-align: bottom;
+}
+
+nav > div > div {
+    width: 20%;
+    padding: 0;
+    padding-bottom: 20%;
+    position: absolute;
+    bottom: 120%;
+    left: 40%;
+    background: url(../images/translate.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 0.5s ease width, 0.5s ease padding-bottom, 0.5s ease left;
+}
+
+#switchCapture > div {
+    background: url(../images/capture_nav.svg);
+}
+
+#switchNotes > div {
+    background-image: url(../images/folder_nav.svg);
+}
+
+nav > div > div:hover {
+    width: 25%;
+    padding-bottom: 25%;
+    left: 37.5%;
+}
+
+.translate #switchTranslate > div,
+.notes #switchNotes > div,
+.capture #switchCapture > div {
+    width: 30%;
+    padding-bottom: 30%;
+    left: 35%;
+}

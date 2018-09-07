@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en" class="no-js capture">
+
+<head>
+
+    <script src="scripts/recorder.js"></script>
+    <script src="scripts/sound_stuff.js"></script>
+
+    <script type="text/javascript" src="scripts/no.js"></script>
+
+    <title>Hearo</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/load.css" />
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/repository.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <form id='captureform'></form>
+    <div class='loadingScreen'>
+        <div class='logowrapper'>
+            <div class='logospiral'></div>
+            <div class='logo'></div>
+        </div>
+    </div>
+
+    <main>
+        <section id="translate">
+            <h1>Text to Speech</h1>
+            <div>
+                <textarea placeholder='Text to Speech'></textarea>
+                <input id='readsubmit' type='submit' />
+                <audio id="audioRead">
+                    <source id="sourceRead" type="audio/ogg">
+                </audio>
+            </div>
+        </section><section id="capture">
+            <div id="capture_select">
+                <h1>I am...</h1>
+                <button id="deaf_btn">Deaf</button><button id="blind_btn">Blind</button>
+            </div><div id="blind">
+                <video autoplay muted></video>
+                <canvas></canvas>
+            </div><div id="deaf">
+                <div>
+                </div>
+                <audio id="audio">
+                    <source id="source" type="audio/mp3">
+                </audio>
+            </div>
+        </section><section id="notes">
+            <header>
+                <h1>[Directory]</h1>
+                <button class='menu'>Menu</button>
+                <button>Upload</button>
+            </header>
+            <div id="repository">
+
+            </div>
+        </section>
+    </main>
+
+    <nav>
+        <div id='switchTranslate'>
+            <div></div>
+        </div><div id='switchCapture'>
+            <div></div>
+        </div><div id='switchNotes'>
+            <div></div>
+        </div>
+    </nav>
+
+    <script src="scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/load.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+</body>
+
+</html>

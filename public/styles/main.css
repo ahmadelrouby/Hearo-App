@@ -1,0 +1,193 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;    
+}
+
+main {
+    position: absolute;
+    left: -100vw;
+    top: 0;
+    width: 300vw;
+    height: 100vh;
+    vertical-align: top;
+}
+
+section {
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    padding-bottom: 40vw;
+    vertical-align: top;
+}
+
+section:nth-child(2) {
+    padding: 0;
+}
+
+section > div {
+    height: 100%;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+}
+
+canvas {
+    display: none;
+}
+
+#capture {
+    background: black;
+}
+
+#notes, #translate {
+    background: #ddd;
+}
+
+#translate textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1em;
+}
+
+#translate input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1em;
+}
+
+#translate div {
+    padding: 1em;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+}
+
+#translate h1 {
+    font-size: 4vw;
+}
+
+#translate textarea {
+    padding: 1em;
+    resize: none;
+    height: calc(90vh - 22vw);
+}
+
+#translate input {
+    padding: 1vw;
+    font-size: 1vw;
+}
+
+#capture_select {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 5;
+    background: purple;
+    transition: 0.5s ease top;
+}
+
+#capture_select h1 {
+    position: absolute;
+    top: 5vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: black;
+    font-size: 8vw;
+    padding: 0;
+    margin: 0;
+}
+
+#capture_select button {
+    box-sizing: border-box;
+    vertical-align: top;
+    width: 50%;
+    height: 100%;
+    font-size: 18vw;
+    border: none;
+    transition: 0.5s ease background-color, 0.5s ease font-size;
+    cursor: pointer;
+}
+
+#deaf, #blind {
+    display: none;
+}
+
+#blind_btn {
+    background: purple;
+    color: white;
+}
+
+#deaf_btn {
+    background: #ddd;
+    color: #333;
+}
+
+#blind_btn:hover {
+    background: rgb(184, 0, 184);
+    font-size: 20vw;
+}
+
+#deaf_btn:hover {
+    background: #fff;
+    font-size: 20vw;
+}
+
+@media screen and (orientation: portrait) {
+    #capture_select button {
+        display: block;
+        width: 100%;
+        height: 50vh;
+    }
+}
+
+#translate h1 {
+    padding: 0.5em;
+    margin: 0;
+    background: purple;
+    color: white;
+}
+
+#translate input {
+    border: none;
+    background: purple;
+    color: white;
+    border-radius: 4px;
+    transition: 0.5s ease background-color;
+}
+
+#translate input:hover {
+    background: rgb(184, 0, 184);
+}
+
+.capture_selected {
+    top: -100% !important;
+}
+
+#deaf {
+    box-sizing: border-box;
+    overflow-y: auto;
+    color: #333;
+    background: #eee;
+    padding: 2rem;
+    padding-bottom: 10vw;
+    font-size: 1.5rem;
+    line-height: 150%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    vertical-align: top;
+}
+
+audio {
+    display: none;
+}

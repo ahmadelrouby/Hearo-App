@@ -1,0 +1,103 @@
+#notes {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#repository {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1vw;
+}
+
+#repository > a {
+    display: inline-block;
+    width: 100px;
+    margin: 1vw;
+    text-decoration: none;
+    color: #333;
+}
+
+#repository > a > div {
+    width: 84%;
+    padding-bottom: 84%;
+    margin: 8%;
+    background-image: url(../images/unknown.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5%;
+    transition: 0.8s ease background-color;
+    background-color: transparent;
+}
+
+#repository > .folder > div {
+    background-image: url(../images/folder.svg);
+}
+
+#repository > .audio > div {
+    background-image: url(../images/audio.svg);
+}
+
+#repository > .image > div {
+    background-image: url(../images/photo.svg);
+}
+
+#repository > .text > div {
+    background-image: url(../images/document.svg);
+}
+
+#repository > .video > div {
+    background-image: url(../images/video.svg);
+}
+
+#repository > a > span {
+    border-radius: 8px;
+    background: #ddd;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 4px;
+    font-size: 0.8rem;
+    transition: 0.4s ease background-color;
+    text-align: center;
+}
+
+#repository .selected span {
+    background: red;
+}
+
+#repository > a:hover > div {
+    background-color: rgb(160, 188, 216);
+}
+
+#repository > a:hover > span {
+    background-color: rgb(160, 188, 216);
+}
+
+#notes h1 {
+    display: inline-block;
+    padding: 0.5em;
+    font-size: 120%;
+    color: white;
+}
+
+#notes header {
+    background: purple;
+}
+
+#notes header button {
+    float: right;
+    width: 3.5em;
+    height: 3.5em;
+    margin: 1em;
+    margin-left: 0.5em;
+    background: none;
+    border-radius: 0.6vw;
+    border: 0.15vw solid rgba(255,255,255,0.8);
+}
+
+#notes header .menu {
+    background: rgba(255,255,255,0.5);
+    border: none;
+}
